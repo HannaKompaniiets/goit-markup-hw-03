@@ -2,18 +2,45 @@
     --primary-title-color: #2E2F42;
     --primary-text-color: #434455;
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #FFFFFF;
     letter-spacing: 0.02em;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top:0;
+    margin-bottom: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .list {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
+
 .references {
+    display: block;
     text-decoration: none;
     color: inherit;
 }
+.container {
+width: 1158px;
+padding-right: 15px ;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+} 
+
+.header-box {
+box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .logo-part1 {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
@@ -22,6 +49,7 @@ body{
     font-size: 18px;
     line-height: 1.33;
 }
+
 .logo-part2 {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
@@ -30,11 +58,15 @@ body{
     font-size: 18px;
     line-height: 1.33;   
 }
+
 .menu {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     color: var (--primary-title-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
+
 }
 .menu:hover {
     color: #434455;
@@ -43,32 +75,74 @@ body{
     color: #4D5AE5;
 }
 
+.navigation-row {
+    display: flex;
+    margin-left: 77px;
+    
+}
+
+.navigation-row .item + .item{
+    margin-left: 40px;
+}
 .contacts {
     font-size: 16px;
     line-height: 1.5;
     color: var(--primary-text-color);
-}
+    padding-top: 24px;
+    padding-bottom: 24px;}
 .contacts:hover {
     color: #4D5AE5;
 }
+.contacts-row {
+    display:flex;
+    margin-left: auto;
+
+}
+.contacts-row .item +.item {
+    margin-left: 40px;
+}
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.top-menu-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .hero{
     background-color: #2E2F42;
-    width: 1440px;
-    height: 603px;
+    /* width: 1440px;
+    height: 603px; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+
 .hero-title {
     font-weight: 600;
     font-size: 56px;
-    line-height: 1.07; 
+    line-height: 1.07;
     text-align: center;
     color: #FFFFFF;
+    margin-bottom: 48px;
+
 }
+    
+
 .button {
-    width: 170px;
+    min-width: 170px;
     height: 51px;
     background: #4D5AE5;
     font-family: inherit;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 16px 32px;
+
 }
 .button:hover {
     background-color: #4D5AE5;
@@ -78,53 +152,119 @@ body{
     background-color: #404BBF;
     color: #FFFFFF;
 }
+
 .button-text {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.19;
     color: #FFFFFF;
 }
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;    
+}
+
+.section-no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .hide {
     display: none;
+}
+
+.about-description {
+    display:flex;
+    flex-wrap: wrap;
 
 }
+.about-description .item {
+    width: 264px;
+}
+
+.about-description .item + .item {
+    margin-left: 24px;
+}
+
 .about-titles {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
-    color: var (--primary-title-color);;
-
+    color: var (--primary-title-color);
+    margin-bottom: 8px;
 }
+
 .about-text {
     font-size: 16px;
     line-height: 1.5;
     color: var(--primary-text-color);
 }
+
 .product-title, .team-title {
     font-weight: 600;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
     text-transform: capitalize;  
-    color: var (--primary-title-color);;
+    color: var (--primary-title-color);
+    margin-bottom: 72px;
 }
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -24px;
+    margin-bottom: 120px;
+}
+
+.product-list .item {
+    width: calc(100% /3 - 24px);
+    margin-left: 24px;
+}
+
 .team {
     background-color: #F4F4FD;
 }
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-list .item{
+    background-color: #FFFFFF;
+}
+
+.team-list .item + .item {
+    margin-left: 24px;
+}
+
+.card-description {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+}
+
 .picture-title {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
     color: var (--primary-title-color);
+    margin-bottom: 8px;
 }
+
 .picture-description {
     font-size: 16px;
     line-height: 1.5;
     color: var(--primary-text-color);
 }
+
 .footer {
     background-color: #2E2F42;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
+
 .logo-footer {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
@@ -132,20 +272,34 @@ body{
     font-weight: 800;
     font-size: 18px;
     line-height: 1.33;
+    margin-bottom: 32px;
+    display: inline-block;
 }
+
 .footer-text {
     font-size: 16px;
     line-height: 1.5;
     color: #E7E9FC;
+    width:  calc(100% / 4) ; 
 }
+
+.section-portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
 .button-menu {
     box-sizing: border-box;
     background-color:#E7E9FC;
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
     font-family: inherit;
     cursor: pointer;
     color: #4D5AE5;
-    
+    padding: 12px 24px;
+    margin-bottom: 72px;    
 }
+
 .button-menu:hover {
     background-color: #4D5AE5;
     color: #FFFFFF;
@@ -158,4 +312,36 @@ body{
     line-height: 1.5;
     letter-spacing: 0.04em; 
     color: #4D5AE5;
+}
+
+.menu-position {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-position .item + .item {
+    margin-left: 24px;
+}
+
+.portfolio-set {
+    display: flex;
+    flex-wrap: wrap; 
+    margin-left:-24px;
+    margin-top: -48px;
+}
+
+.portfolio-set .item {
+    flex-basis: calc(100% / 3 - 24px);
+    margin-left: 24px;
+    margin-top: 48px;
+}
+
+.card {
+    border: 0.5px solid #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.works-description {
+    padding: 32px 16px;
 }
